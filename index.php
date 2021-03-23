@@ -4,7 +4,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
 $obj = file_get_contents("php://input");
 $json = json_decode($obj, true);
-
+//test
 
 $data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $json['img']));
 
