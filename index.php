@@ -9,7 +9,7 @@ $json = json_decode($obj, true);
 $data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $json['img']));
 
 try {
-  file_put_contents('tmp/'.$json['name'].'.png', $data);
+  file_put_contents('gallery/'.$json['name'].'.png', $data);
 } catch (\Exception $e) {
   header("Content-type: application/json; charset=utf-8");
   $response["status"] = 400;
